@@ -49,42 +49,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Projects Data & Dynamic Rendering ---
+    // --- Projects Data & Dynamic Rendering (Updated based on issue.md Profile) ---
     const projectsData = [
         {
-            title: "Solar Energy Dashboard",
-            category: "pv",
-            categoryLabel: "Photovoltaic Engineer",
-            desc: "Sistem pemantauan kinerja panel surya secara real-time dengan antarmuka dark-mode modern.",
-            img: "assets/images/project_pv.png",
-            tags: ["IoT", "Dashboard", "Solar"],
-            link: "#"
-        },
-        {
-            title: "Smart Home Node",
-            category: "iot",
-            categoryLabel: "IoT & Electronics",
-            desc: "Pengontrol mikrokontroler berbasis jaringan untuk otomasi elemen rumah masa depan.",
-            img: "assets/images/project_iot.png",
-            tags: ["C++", "Hardware", "ESP32"],
-            link: "#"
-        },
-        {
-            title: "Weather Data Platform",
+            title: "Logbook Operasional Geofisika",
             category: "web",
-            categoryLabel: "Web App",
-            desc: "Aplikasi web modern bergaya glassmorphism untuk memvisualisasikan data cuaca regional.",
+            categoryLabel: "Fullstack Laravel",
+            desc: "Aplikasi pencatatan operasional dinamis dengan generator narasi & infografis gempa otomatis, import/export CSV, serta integrasi pemetaan Leaflet dan html2canvas.",
             img: "assets/images/project_web.png",
-            tags: ["React", "Tailwind", "API"],
+            tags: ["Laravel", "PHP", "Leaflet.js", "JS"],
             link: "#"
         },
         {
-            title: "AI Weather Predictor",
-            category: "ai",
-            categoryLabel: "AI & Machine Learning",
-            desc: "Model prediksi curah hujan dan anomali cuaca lokal terintegrasi dengan data sensor AWS BMKG.",
-            img: "assets/images/hero.png",
-            tags: ["Python", "TensorFlow", "Data Sci"],
+            title: "Predictive Aki Genset Degradation",
+            category: "power",
+            categoryLabel: "Power System & Microcontroller",
+            desc: "Proyek pemantauan & contingency analysis untuk memprediksi degradasi daya aki genset stasiun seismograf BMKG guna mengantisipasi power failure sistem vital.",
+            img: "assets/images/project_pv.png",
+            tags: ["Microcontroller", "Energy", "Analytics"],
+            link: "#"
+        },
+        {
+            title: "Portal UPT Stasiun Geofisika",
+            category: "web",
+            categoryLabel: "Web Development",
+            desc: "Pengembangan portal informasi digital resmi profil UPT BMKG Balikpapan yang modern, responsif, berkinerja tinggi, dan mudah diakses publik.",
+            img: "assets/images/project_web.png",
+            tags: ["Laravel", "Tailwind CSS", "UI/UX"],
+            link: "#"
+        },
+        {
+            title: "Mobile Seismic Disaster Info",
+            category: "mobile",
+            categoryLabel: "Mobile App Development",
+            desc: "Aplikasi mobile tanggap bencana seismik hasil rancangan intensif diklat Pusjarkom BMKG 2023 dengan kerangka kerja cross-platform Flutter.",
+            img: "assets/images/project_iot.png",
+            tags: ["Flutter", "Dart", "Pusjarkom", "API"],
             link: "#"
         }
     ];
