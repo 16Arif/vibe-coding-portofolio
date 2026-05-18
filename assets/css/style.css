@@ -62,3 +62,102 @@ input:-webkit-autofill:active{
     background-color: #0ea5e9; /* primary */
     color: white;
 }
+
+/* --- Animated Glowing Blobs --- */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 8s infinite alternate ease-in-out;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.reveal-fade-up {
+    transform: translateY(40px);
+}
+
+.reveal-fade-left {
+    transform: translateX(-40px);
+}
+
+.reveal-fade-right {
+    transform: translateX(40px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Timeline vertical line custom accent */
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    width: 2px;
+    background-color: #e2e8f0; /* slate-200 */
+}
+
+.dark .timeline-line::before {
+    background-color: #334155; /* slate-700 */
+}
+
+@media (min-width: 768px) {
+    .timeline-line::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Magnetic-like hover on premium buttons */
+.btn-premium {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-premium::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.btn-premium:hover::after {
+    height: 380%;
+}

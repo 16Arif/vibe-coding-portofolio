@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arif | BMKG Technician & Developer</title>
-    <meta name="description" content="Portofolio Arif, seorang Teknisi BMKG dengan ketertarikan di bidang IoT, Web Development, dan AI.">
+    <title>Arif Abdul | BMKG Technician & Developer</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Portofolio Arif Abdul - Seorang BMKG Technician & Developer berpengalaman di bidang IoT, Photovoltaic Systems, AI, dan Web Apps.">
+    <meta name="keywords" content="Arif Abdul, BMKG Technician, IoT Developer, Photovoltaic Systems, Web Developer, Indonesia">
+    <meta name="author" content="Arif Abdul">
+    <meta property="og:title" content="Arif Abdul | BMKG Technician & Developer">
+    <meta property="og:description" content="Portofolio modern Arif Abdul yang menampilkan proyek-proyek inovatif di bidang IoT, Solar Energy (Photovoltaic), AI, dan Web Development.">
+    <meta property="og:image" content="assets/images/hero.png">
+    <meta property="og:url" content="https://16arif.github.io/vibe-coding-portofolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arif Abdul | BMKG Technician & Developer">
+    <meta name="twitter:description" content="Portofolio modern Arif Abdul yang menampilkan proyek-proyek inovatif di bidang IoT, Solar Energy (Photovoltaic), AI, dan Web Development.">
+    <meta name="twitter:image" content="assets/images/hero.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +51,12 @@
     <!-- Phosphor Icons (Lightweight icon library) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 transition-colors duration-300">
+<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 transition-colors duration-300 relative overflow-x-hidden">
+
+    <!-- Glowing Background Blobs for Aesthetic Tech Vibe -->
+    <div class="absolute top-10 left-10 w-72 h-72 bg-sky-400/25 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-10 animate-blob pointer-events-none"></div>
+    <div class="absolute top-40 right-10 w-96 h-96 bg-teal-400/25 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-10 animate-blob animation-delay-2000 pointer-events-none"></div>
+    <div class="absolute top-[800px] left-1/3 w-80 h-80 bg-purple-400/25 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000 pointer-events-none"></div>
 
     <!-- Header & Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
@@ -53,6 +71,7 @@
                 <nav class="hidden md:flex space-x-8">
                     <a href="#home" class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary font-medium transition-colors">Home</a>
                     <a href="#about" class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary font-medium transition-colors">About</a>
+                    <a href="#experience" class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary font-medium transition-colors">Experience</a>
                     <a href="#projects" class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary font-medium transition-colors">Projects</a>
                     <a href="#contact" class="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary font-medium transition-colors">Contact</a>
                 </nav>
@@ -76,6 +95,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
                 <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
             </div>
@@ -85,7 +105,7 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-            <div class="flex-1 text-center md:text-left">
+            <div class="flex-1 text-center md:text-left reveal reveal-fade-left">
                 <p class="text-primary font-semibold tracking-wide uppercase mb-2">Halo, perkenalkan saya</p>
                 <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-4">Arif Abdul</h1>
                 <h2 class="text-2xl md:text-3xl font-medium text-slate-600 dark:text-slate-400 mb-6">BMKG Technician</h2>
@@ -93,20 +113,24 @@
                     Seorang teknisi yang berdedikasi dengan passion mendalam pada Internet of Things (IoT), pengembangan aplikasi modern, dan analisis cuaca. Selalu bersemangat untuk memecahkan masalah melalui teknologi.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#projects" class="bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-primary/30 transform hover:-translate-y-1">Lihat Portofolio</a>
+                    <a href="#projects" class="btn-premium bg-primary hover:bg-primaryHover text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-primary/30 transform hover:-translate-y-1">Lihat Portofolio</a>
                     <a href="#contact" class="px-8 py-3 rounded-full font-medium border-2 border-slate-300 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-slate-300 transition-all">Hubungi Saya</a>
+                    <a href="assets/Arif_Abdul_CV.pdf" download class="btn-premium bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-emerald-500/30 transform hover:-translate-y-1 flex items-center space-x-2">
+                        <i class="ph ph-download-simple"></i>
+                        <span>Download CV</span>
+                    </a>
                 </div>
             </div>
-            <div class="flex-1 w-full max-w-md md:max-w-none relative">
+            <div class="flex-1 w-full max-w-md md:max-w-none relative reveal reveal-fade-right">
                 <div class="absolute inset-0 bg-primary rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <img src="assets/images/hero.png" alt="Arif - BMKG Technician & Developer" class="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 object-cover aspect-square md:aspect-auto">
+                <img src="assets/images/hero.png" alt="Arif - BMKG Technician & Developer" class="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 object-cover aspect-square md:aspect-auto" loading="lazy">
             </div>
         </section>
 
         <!-- About Me Section -->
         <section id="about" class="py-20 bg-slate-100 dark:bg-slate-800/50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-16 reveal reveal-fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white inline-block relative">
                         About Me
                         <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
@@ -114,7 +138,7 @@
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400">
+                    <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 reveal reveal-fade-left">
                         <p>
                             Sebagai Teknisi di BMKG, saya terbiasa bekerja dengan data yang presisi dan instrumen yang sensitif. Beranjak dari sana, saya mengembangkan minat yang kuat pada bagaimana teknologi dapat memudahkan kehidupan kita.
                         </p>
@@ -123,18 +147,95 @@
                         </p>
                     </div>
                     
-                    <div class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700">
+                    <div class="bg-white dark:bg-darkCard p-8 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 reveal reveal-fade-right">
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
                             <i class="ph ph-code text-primary mr-2 text-2xl"></i> Keahlian & Teknologi
                         </h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-semibold">HTML5 & CSS3</span>
-                            <span class="px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-semibold">JavaScript (ES6+)</span>
-                            <span class="px-4 py-2 bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 rounded-full text-sm font-semibold">Tailwind CSS</span>
-                            <span class="px-4 py-2 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded-full text-sm font-semibold">Internet of Things</span>
-                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-semibold">Python</span>
-                            <span class="px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-sm font-semibold">Photovoltaic Systems</span>
-                            <span class="px-4 py-2 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-semibold">Artificial Intelligence</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">HTML5 & CSS3</span>
+                            <span class="px-4 py-2 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">JavaScript (ES6+)</span>
+                            <span class="px-4 py-2 bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">Tailwind CSS</span>
+                            <span class="px-4 py-2 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">Internet of Things</span>
+                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">Python</span>
+                            <span class="px-4 py-2 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">Photovoltaic Systems</span>
+                            <span class="px-4 py-2 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 cursor-default">Artificial Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal reveal-fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white inline-block relative">
+                        Pengalaman & Perjalanan
+                        <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
+                    </h2>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">Jejak langkah profesional dan keahlian yang telah saya lalui.</p>
+                </div>
+
+                <div class="relative timeline-line">
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-12 md:mb-16 flex flex-col md:flex-row items-center reveal reveal-fade-left">
+                        <div class="flex md:w-1/2 md:justify-end md:pr-12 md:text-right w-full pl-12 md:pl-0 mb-4 md:mb-0">
+                            <div>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">2022 - Sekarang</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Teknisi Peralatan Observasi</h3>
+                                <p class="text-primary font-medium text-sm">BMKG (Badan Meteorologi Klimatologi dan Geofisika)</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Point -->
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white dark:border-darkBg flex items-center justify-center z-10 shadow-md">
+                            <i class="ph ph-briefcase text-white text-xs"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 w-full pl-12">
+                            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+                                Bertanggung jawab atas instalasi, kalibrasi, pemeliharaan preventif, dan perbaikan stasiun pemantauan cuaca otomatis (Automatic Weather Station), AWS, radar cuaca, sistem sensor mikrokontroler berbasis IoT, dan jaringan transmisi data cuaca real-time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-12 md:mb-16 flex flex-col md:flex-row-reverse items-center reveal reveal-fade-right">
+                        <div class="flex md:w-1/2 md:justify-start md:pl-12 w-full pl-12 mb-4 md:mb-0">
+                            <div>
+                                <span class="px-3 py-1 bg-teal-500/10 text-teal-600 dark:text-teal-400 rounded-full text-xs font-semibold">2021</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Photovoltaic System Designer</h3>
+                                <p class="text-teal-600 dark:text-teal-400 font-medium text-sm">Proyek Riset Off-Grid Solar</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Point -->
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-teal-500 border-4 border-white dark:border-darkBg flex items-center justify-center z-10 shadow-md">
+                            <i class="ph ph-sun text-white text-xs"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right w-full pl-12 md:pl-0">
+                            <div class="flex justify-start md:justify-end">
+                                <p class="text-slate-600 dark:text-slate-400 max-w-md">
+                                    Merancang sistem tenaga surya mini (Photovoltaic) mandiri dengan manajemen daya cerdas (Smart Charge Controller) untuk menyuplai daya ke stasiun pemantauan cuaca yang berada di wilayah terpencil tanpa pasokan listrik PLN.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="flex flex-col md:flex-row items-center reveal reveal-fade-left">
+                        <div class="flex md:w-1/2 md:justify-end md:pr-12 md:text-right w-full pl-12 md:pl-0 mb-4 md:mb-0">
+                            <div>
+                                <span class="px-3 py-1 bg-purple-500/10 text-purple-600 dark:text-purple-400 rounded-full text-xs font-semibold">2020 - 2022</span>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2">Freelance IoT & Web Developer</h3>
+                                <p class="text-purple-600 dark:text-purple-400 font-medium text-sm">Self-Employed</p>
+                            </div>
+                        </div>
+                        <!-- Timeline Point -->
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-500 border-4 border-white dark:border-darkBg flex items-center justify-center z-10 shadow-md">
+                            <i class="ph ph-cpu text-white text-xs"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 w-full pl-12">
+                            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+                                Membangun berbagai proyek IoT kustom berbasis ESP32/Arduino dan merancang antarmuka dasbor web yang bersih menggunakan HTML/CSS/Tailwind dan React.js untuk berbagai klien pemantauan lingkungan.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -142,9 +243,9 @@
         </section>
 
         <!-- Projects Showcase Section -->
-        <section id="projects" class="py-20">
+        <section id="projects" class="py-20 bg-slate-50 dark:bg-darkBg transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal reveal-fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white inline-block relative">
                         Projects Showcase
                         <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
@@ -152,7 +253,7 @@
                 </div>
 
                 <!-- Filter Buttons -->
-                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12" id="filter-container">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 reveal reveal-fade-up" id="filter-container">
                     <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition-all bg-primary text-white shadow-md" data-filter="all">Semua</button>
                     <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="pv">Photovoltaic</button>
                     <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="iot">IoT</button>
@@ -160,72 +261,13 @@
                     <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700" data-filter="ai">AI</button>
                 </div>
 
-                <!-- Project Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                    
-                    <!-- Project 1 -->
-                    <div class="project-card group bg-white dark:bg-darkCard rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="pv">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="assets/images/project_pv.png" alt="Solar Energy Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                <a href="#" class="px-6 py-2 bg-white text-slate-900 rounded-full font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Detail Proyek</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Photovoltaic Engineer</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Solar Energy Dashboard</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Sistem pemantauan kinerja panel surya secara real-time dengan antarmuka dark-mode modern.</p>
-                            <div class="flex gap-2">
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">IoT</span>
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">Dashboard</span>
-                            </div>
-                        </div>
+                <!-- Project Grid (Dynamically rendered by app.js) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[300px]" id="projects-grid">
+                    <!-- Skeleton Loader while JavaScript loads -->
+                    <div class="col-span-full flex flex-col items-center justify-center py-12">
+                        <i class="ph ph-spinner animate-spin text-5xl text-primary"></i>
+                        <p class="mt-4 text-slate-500 dark:text-slate-400">Memuat proyek-proyek terbaik...</p>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card group bg-white dark:bg-darkCard rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="iot">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="assets/images/project_iot.png" alt="Smart Home Automation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                <a href="#" class="px-6 py-2 bg-white text-slate-900 rounded-full font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Detail Proyek</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold text-primary uppercase tracking-wider">IoT</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Smart Home Node</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Pengontrol mikrokontroler berbasis jaringan untuk otomasi elemen rumah masa depan.</p>
-                            <div class="flex gap-2">
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">C++</span>
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">Hardware</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card group bg-white dark:bg-darkCard rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="web">
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="assets/images/project_web.png" alt="Weather Data Platform" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                <a href="#" class="px-6 py-2 bg-white text-slate-900 rounded-full font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Detail Proyek</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Web App</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Weather Data Platform</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Aplikasi web modern bergaya glassmorphism untuk memvisualisasikan data cuaca regional.</p>
-                            <div class="flex gap-2">
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">React</span>
-                                <span class="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-600 dark:text-slate-400">Tailwind</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -233,7 +275,7 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-slate-100 dark:bg-slate-800/50">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
+                <div class="text-center mb-12 reveal reveal-fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white inline-block relative">
                         Contact Me
                         <span class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-primary rounded-full"></span>
@@ -241,8 +283,9 @@
                     <p class="mt-6 text-slate-600 dark:text-slate-400">Mari berdiskusi tentang proyek inovatif selanjutnya.</p>
                 </div>
 
-                <div class="bg-white dark:bg-darkCard rounded-3xl shadow-xl p-8 md:p-10 border border-slate-200 dark:border-slate-700">
-                    <form id="contactForm" class="space-y-6" novalidate>
+                <div class="bg-white dark:bg-darkCard rounded-3xl shadow-xl p-8 md:p-10 border border-slate-200 dark:border-slate-700 reveal reveal-fade-up">
+                    <!-- Updated with Formspree Endpoint Placeholder (Easily replaceable by user) -->
+                    <form id="contactForm" class="space-y-6" action="https://formspree.io/f/placeholder_id" method="POST" novalidate>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="form-group">
                                 <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nama Lengkap</label>
@@ -260,7 +303,7 @@
                             <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors outline-none resize-none" placeholder="Tuliskan pesan Anda di sini..."></textarea>
                             <p class="text-red-500 text-xs mt-1 hidden error-msg">Pesan tidak boleh kosong.</p>
                         </div>
-                        <button type="submit" class="w-full md:w-auto px-8 py-4 bg-primary hover:bg-primaryHover text-white rounded-lg font-bold transition-all flex items-center justify-center space-x-2">
+                        <button type="submit" class="w-full md:w-auto px-8 py-4 bg-primary hover:bg-primaryHover text-white rounded-lg font-bold transition-all flex items-center justify-center space-x-2 btn-premium">
                             <span>Kirim Pesan</span>
                             <i class="ph ph-paper-plane-right"></i>
                         </button>
@@ -271,7 +314,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800">
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800 relative z-10">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1" aria-label="LinkedIn">
@@ -293,10 +336,15 @@
                 <i class="ph ph-check-circle text-4xl"></i>
             </div>
             <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Berhasil!</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">Pesan Anda telah berhasil dikirim. Saya akan segera menghubungi Anda kembali.</p>
+            <p id="successModalMsg" class="text-slate-600 dark:text-slate-400 mb-6">Pesan Anda telah berhasil dikirim. Saya akan segera menghubungi Anda kembali.</p>
             <button id="closeModal" class="w-full px-6 py-3 bg-primary hover:bg-primaryHover text-white rounded-lg font-semibold transition-colors">Tutup</button>
         </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 p-3 bg-primary hover:bg-primaryHover text-white rounded-full shadow-lg z-[90] opacity-0 translate-y-10 invisible transition-all duration-300 transform hover:-translate-y-1" aria-label="Kembali ke atas">
+        <i class="ph ph-arrow-up text-xl"></i>
+    </button>
 
     <!-- Application Script -->
     <script src="assets/js/app.js"></script>
