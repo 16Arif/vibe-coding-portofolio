@@ -1,85 +1,98 @@
-# Rencana Peningkatan UI/UX dan Fungsionalitas Portofolio (Issue Tracker)
+# Pembaruan Konten Portofolio Arif Abdul (Content Update Tracker)
 
-Dokumen ini berisi ulasan (*review*) kode saat ini dan panduan teknis yang sangat detail untuk meningkatkan tampilan (UI/UX), nilai (value), serta struktur kode website portofolio statis Arif.
-*Task* ini disiapkan agar dapat dieksekusi dengan mudah oleh *junior programmer* atau *AI Agent*.
-
----
-
-## 📋 Status Kode Saat Ini (Review)
-1. **HTML & CSS**: Struktur semantik sudah baik, *class* Tailwind digunakan dengan tepat. Kustomisasi di `style.css` (scrollbar, modal) cukup rapi.
-2. **JavaScript**: Fungsionalitas utama (*dark mode*, filter, validasi form, *mobile menu*) sudah berfungsi dengan baik menggunakan Vanilla JS yang modular.
-3. **Kekurangan**: 
-   - Halaman terasa statis saat digulir (*scroll*), tidak ada animasi kemunculan elemen.
-   - Formulir kontak hanya berupa simulasi UI, data belum dikirim ke email mana pun.
-   - Gambar belum dioptimalkan (tidak ada atribut *lazy loading* atau format modern seperti WebP).
-   - Meta tag SEO dan Open Graph (OG) belum lengkap untuk pratinjau saat dibagikan ke sosial media.
-   - Skalabilitas penambahan proyek masih manual (salin-tempel elemen HTML).
+Dokumen ini berisi panduan teknis yang sangat detail untuk memperbarui konten (teks, data proyek, dan riwayat pengalaman) pada website portofolio statis Arif Abdul, menyesuaikan dengan profil, keahlian, dan tujuan karir terbarunya.
+*Task* ini disiapkan agar dapat dieksekusi langkah demi langkah dengan presisi oleh *junior programmer* atau *AI Agent*.
 
 ---
 
-## 🎯 Fase 1: Peningkatan UI & Animasi (Estetika Modern)
-
-### 1.1 Implementasi Animasi Scroll (Scroll Reveal)
-Halaman saat ini muncul sekaligus. Tambahkan efek *fade-in-up* ketika elemen masuk ke dalam *viewport*.
-- **Tugas (JS/CSS)**: 
-  - Gunakan **Intersection Observer API** di `app.js` tanpa librari tambahan, ATAU tambahkan librari ringan seperti [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/).
-  - Terapkan efek transisi `fade-up` pada `h2`, teks paragraf, dan setiap `.project-card`.
-  - Berikan jeda waktu (*stagger/delay*) pada kartu proyek di bagian *Projects Showcase* agar muncul satu per satu secara bergantian.
-
-### 1.2 Back-to-Top Button
-- **Tugas (HTML/CSS/JS)**:
-  - Buat tombol panah ke atas (floating button) di pojok kanan bawah.
-  - Sembunyikan tombol tersebut di awal, dan tampilkan (*fade in*) hanya jika *user* sudah melakukan *scroll* ke bawah lebih dari 500px.
-  - Klik tombol harus memicu *smooth scroll* kembali ke `#home`.
-
-### 1.3 Perbaikan Latar Belakang Hero Section
-- **Tugas (CSS/JS)**:
-  - Ganti aksen warna statis di latar belakang Hero menjadi **Animated Gradient Background** atau integrasikan partikel interaktif (menggunakan librari *tsParticles*) untuk memperkuat identitas "IoT & Data Engineer".
-  - Tambahkan efek *hover/magnetic* pada tombol "Lihat Portofolio" dan "Hubungi Saya" agar terasa lebih premium.
+## 🎯 Objektif Profil Baru
+Portofolio harus mencerminkan Arif sebagai:
+1. **Teknisi BMKG (Stasiun Geofisika Balikpapan)** dengan keahlian teknis operasional.
+2. **Fullstack Developer** (Laravel, PHP, JS, Flutter) yang mengembangkan aplikasi logbook gempa terintegrasi.
+3. **Calon Mahasiswa Master** yang bersemangat di bidang *Renewable Energy*, *Power Systems*, dan *Microcontroller*, dengan rekam jejak nyata dalam memecahkan masalah kelistrikan (seismograf/genset).
+4. Seseorang dengan kepedulian terhadap isu iklim, bencana, serta memiliki hobi hidroponik selada.
 
 ---
 
-## 🎯 Fase 2: Peningkatan Fungsionalitas (Value Tambahan)
+## 📋 Eksekusi Fase 1: Penyesuaian `index.html` (Struktur Utama)
 
-### 2.1 Integrasi Pengiriman Email Nyata (Contact Form)
-Saat ini formulir hanya memunculkan modal sukses simulasi.
-- **Tugas (HTML/JS)**:
-  - Daftar dan gunakan layanan *backend-as-a-service* gratis seperti **Formspree** (`https://formspree.io/`) atau **EmailJS**.
-  - Ubah `<form id="contactForm">` untuk menunjuk ke *endpoint* layanan tersebut menggunakan AJAX (Fetch API).
-  - Tampilkan Modal Sukses (yang sudah ada) HANYA jika *response status* dari API adalah `200 OK`. Jika gagal, tampilkan pesan *error* "Koneksi terputus/Gagal".
+### 1.1 Update Hero Section (Bagian Atas)
+- **Lokasi Kode**: `<section id="home">`
+- **Tugas**:
+  - Ubah deskripsi di bawah judul "Arif Abdul - BMKG Technician" agar lebih mencerminkan profil baru.
+  - **Teks Baru (Saran)**: "Teknisi di Stasiun Geofisika Balikpapan - BMKG yang memadukan keahlian Instrumentasi dan *Fullstack Web Development*. Berdedikasi pada keandalan sistem peringatan dini bencana, peduli pada isu perubahan iklim, dan saat ini mendalami *Renewable Energy* serta analisis sistem tenaga kelistrikan."
 
-### 2.2 Penambahan Fitur "Unduh CV"
-- **Tugas (HTML)**:
-  - Tambahkan sebuah tautan baru dengan *styling* teks yang rapi di dekat/di bawah tombol "Hubungi Saya" pada *Hero Section* dengan label "Download CV".
-  - Sediakan sebuah *file* `resume.pdf` di dalam folder `assets/` dan hubungkan atribut `href` serta `download` pada tombol tersebut.
+### 1.2 Update About Me Section
+- **Lokasi Kode**: `<section id="about">`
+- **Tugas (Paragraf Profil)**:
+  - Tulis ulang 2 paragraf profil menjadi 3 paragraf yang mencakup:
+    - Latar belakang pendidikan (Lulusan Diploma IV Instrumentasi STMKG tahun 2020) dan peran saat ini sejak Juni 2021.
+    - Pengalaman menghadapi masalah kegagalan daya (*power failure*) akibat *drop* tegangan baterai pada sistem seismograf, yang memotivasi ketertarikan pada *renewable energy*, *photovoltaic*, dan efisiensi sistem tenaga. Serta keinginan melanjutkan studi master di bidang *renewable energy*, *microcontroller*, *network model*, dan *power flow analysis*.
+    - Sisi personal: Peduli terhadap isu perubahan iklim dan bencana, memiliki hobi hidroponik selada (terutama strategi budidaya di iklim panas), serta mengantongi skor IELTS 6.0.
+- **Tugas (Skill Badges)**:
+  - Perbarui daftar label keahlian (*badges*). Hapus yang tidak relevan dan ganti dengan: `Laravel`, `PHP`, `JavaScript`, `Flutter`, `Photovoltaic`, `Power System Analysis`, `Microcontroller`, `Renewable Energy`.
 
-### 2.3 Pembuatan Bagian "Experience / Timeline"
-Portofolio yang kuat perlu menunjukkan rekam jejak.
-- **Tugas (HTML/CSS)**:
-  - Sisipkan *section* baru (misalnya dengan ID `#experience`) tepat di atas *Projects Showcase*.
-  - Desain elemen *vertical timeline* (garis vertikal dengan titik-titik) yang mencantumkan peran sebagai "Teknisi BMKG" beserta tahun, pendidikan terakhir, dan sertifikasi.
-  - Gunakan garis tepi (*border-left*) pada Tailwind untuk membuat *timeline* yang rapi di perangkat *mobile* dan *desktop*.
+### 1.3 Update Experience / Timeline Section
+- **Lokasi Kode**: `<section id="experience">`
+- **Tugas**: Sesuaikan rentang waktu dan peran (ubah isi HTML dari elemen *timeline* yang sudah ada). Tambahkan/kurangi *item* agar sesuai dengan data berikut:
+  1. **Juni 2021 - Sekarang**: Teknisi BMKG di Stasiun Geofisika Balikpapan. (Sebutkan fokus pada keandalan operasional, seismograf, genset).
+  2. **Saat Ini (Ongoing)**: Development Website UPT Stasiun Geofisika Balikpapan & Project Predictive Power Degradation Aki Genset.
+  3. **Juni 2025 - Januari 2026**: Driver Gojek (Sebutkan sebagai pengalaman membangun kegigihan dan interaksi sosial).
+  4. **2023**: Mengikuti Diklat Pemrograman Aplikasi Mobile oleh Pusjarkom BMKG (Tingkatkan fokus pada Flutter/Mobile).
+  5. **2020**: Lulus Diploma IV Instrumentasi dari Sekolah Tinggi Meteorologi Klimatologi dan Geofisika (STMKG).
 
 ---
 
-## 🎯 Fase 3: Optimalisasi Performa & Skalabilitas (Code Quality)
+## 📋 Eksekusi Fase 2: Penyesuaian `assets/js/app.js` (Dynamic Projects)
 
-### 3.1 Optimalisasi Gambar & Performa
-- **Tugas (HTML/Aset)**:
-  - Kompres semua *file* `.png` di `assets/images/` menjadi format `.webp` yang jauh lebih kecil.
-  - Tambahkan atribut `loading="lazy"` pada setiap tag `<img>` di bawah garis lipatan (*below the fold*), terutama pada gambar proyek.
+### 2.1 Perbarui Kategori Filter Proyek
+- **Lokasi Kode di `index.html`**: Elemen `<div id="filter-container">`
+- **Tugas**: 
+  - Ubah tombol filter menjadi relevan dengan proyek baru.
+  - Saran Filter: `all` (Semua), `web` (Web App/Laravel), `power` (Power & Energy), `mobile` (Mobile App).
 
-### 3.2 Penyempurnaan SEO & Meta Tags
-- **Tugas (HTML)**:
-  - Tambahkan Open Graph tags pada bagian `<head>`: `og:title`, `og:description`, `og:image` (tautkan ke gambar *banner* portofolio), dan `og:url`.
-  - Tambahkan Twitter Card tags untuk memastikan tampilan pratinjau yang profesional ketika URL portofolio dibagikan di media sosial.
+### 2.2 Perbarui Data Array `projectsData`
+- **Lokasi Kode di `app.js`**: `const projectsData = [ ... ]`
+- **Tugas**: Ganti seluruh objek di dalam array tersebut dengan daftar proyek berikut:
+  
+  **Proyek 1: Aplikasi Logbook Operasional (Laravel)**
+  - `category`: `web`
+  - `categoryLabel`: `Fullstack Laravel`
+  - `title`: `Aplikasi Logbook Operasional Geofisika`
+  - `desc`: `Aplikasi operasional terintegrasi dengan fitur generator narasi dan infografis gempa, import/export CSV, serta integrasi pemetaan Leaflet dan html2canvas.`
+  - `tags`: `["Laravel", "PHP", "Leaflet", "JS"]`
 
-### 3.3 Dynamic Project Rendering (Opsional Tingkat Lanjut)
-- **Tugas (JS/HTML)**:
-  - Ekstrak seluruh data proyek (judul, deskripsi, kategori, URL gambar) ke dalam sebuah array *object* tunggal di JavaScript (`const projects = [...]`).
-  - Hapus kode HTML statis untuk kartu proyek di `index.html`.
-  - Gunakan Vanilla JS `.map()` untuk men-generate struktur DOM kartu proyek secara otomatis saat halaman dimuat. Hal ini membuat pembaruan portofolio ke depannya menjadi sangat cepat tanpa menyentuh *file* HTML.
+  **Proyek 2: Predictive Power Degradation Aki Genset**
+  - `category`: `power`
+  - `categoryLabel`: `Power System & Data`
+  - `title`: `Prediksi Degradasi Aki Genset Stageof Balikpapan`
+  - `desc`: `Proyek analisis sistem kelistrikan (contingency analysis) untuk memahami akar masalah power failure dan memprediksi penurunan daya baterai pada fasilitas seismograf.`
+  - `tags`: `["Energy", "Data Analysis", "Microcontroller"]`
+
+  **Proyek 3: Website UPT Stasiun Geofisika Balikpapan**
+  - `category`: `web`
+  - `categoryLabel`: `Web Development`
+  - `title`: `Website Profil UPT Stageof Balikpapan`
+  - `desc`: `Pengembangan portal informasi resmi stasiun geofisika secara komprehensif, modern, dan mudah diakses oleh publik.`
+  - `tags`: `["Laravel", "Frontend", "UI/UX"]`
+
+  *(Catatan: Anda dapat menggunakan gambar aset `project_web.png` atau `project_iot.png` yang sudah ada sebagai placeholder gambar `img` untuk saat ini).*
+
+---
+
+## 📋 Eksekusi Fase 3: SEO dan Finalisasi (Opsional tapi Penting)
+
+### 3.1 Perbarui Meta Description
+- **Lokasi Kode di `index.html`**: `<meta name="description">` dan `<meta property="og:description">`
+- **Tugas**: Pastikan deskripsinya menyebutkan "Teknisi BMKG Balikpapan", "Laravel Fullstack Developer", dan "Renewable Energy Enthusiast".
+
+### 3.2 Instruksi Validasi untuk Eksekutor
+Setelah semua perubahan pada HTML dan JS selesai dilakukan:
+1. Buka file `index.html` di browser.
+2. Verifikasi bahwa paragraf "About Me" merender cerita tentang seismograf dan hobi hidroponik selada.
+3. Uji tombol filter proyek (Web App, Power, dll.) dan pastikan proyek Laravel serta Genset muncul dengan benar.
+4. Verifikasi bahwa alur timeline (STMKG -> BMKG -> Diklat Pusjarkom -> Gojek -> Saat ini) tersusun secara logis secara vertikal.
 
 ---
 **Catatan untuk Eksekutor (AI/Junior Dev):** 
-Harap eksekusi setiap fase secara berurutan. Prioritaskan Fase 1 dan Fase 2 terlebih dahulu untuk memberikan dampak visual dan fungsi yang paling signifikan. Pastikan struktur *clean code* di Vanilla JS dan Tailwind dipertahankan.
+Gunakan bahasa Indonesia yang baku namun tetap luwes dan profesional untuk isi teks konten (copywriting). Jangan menghapus class utilitas CSS Tailwind yang mengatur animasi (`reveal`) dan responsivitas saat mengganti isi teks.
